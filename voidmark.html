@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOIDMARK Software - Yakında...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            margin: 0;
+            animation: rainbow-glow 5s linear infinite;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 0.8rem;
+            color: #f0f0f0;
+            margin-top: 50px;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fade-in 4s ease-in-out 0.1s forwards;
+        }
+        
+        @keyframes rainbow-glow {
+            0%   { color: #1eff00; text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de; }
+            20%  { color: #1eff00; text-shadow: 0 0 10px #00a2ff, 0 0 20px #00a2ff; }
+            40%  { color: #1eff00; text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8; }
+            60%  { color: #1eff00; text-shadow: 0 0 10px #c8ff00, 0 0 20px #c8ff00; }
+            80%  { color: #1eff00; text-shadow: 0 0 10px #ff8a00, 0 0 20px #ff8a00; }
+            100% { color: #1eff00; text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de; }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1rem; }
+            p { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>VOIDMARK</h1>
+        <br>
+        <h2>SOFTWARE & GAMES</h2>
+        <p>SİTEMİZ YAPIM AŞAMASINDADIR...</p>
+    </div>
+</body>
+</html>
