@@ -1,0 +1,128 @@
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            margin: 0;
+            animation: rainbow-glow 5s linear infinite;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: rainbow-glow 5s linear infinite;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 0.8rem;
+            margin-top: 30px;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            animation: rainbow-glow 5s linear infinite,
+            fade-in 3s ease-in-out 0.1s forwards;
+        }
+
+        .loading-container {
+            width: 80%;
+            max-width: 400px;
+            margin: 40px auto 0;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background: #111;
+            border-radius: 30px;
+            padding: 3px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+
+        .progress {
+            display: block;
+            height: 100%;
+            width: 50%;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ffffff, #ffffff);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            position: relative;
+            animation: progress 3s ease-in-out forwards;
+            overflow: hidden;
+        }
+
+        .progress::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shine 1.5s infinite;
+        }
+
+        .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.7rem;
+            color: #fff;
+            text-shadow: 0 0 3px #000;
+            z-index: 2;
+        }
+
+        @keyframes progress {
+            from { width: 0%; }
+            to { width: 25%; }
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        @keyframes rainbow-glow {
+            0%   { color: #ff00de; text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de; }
+            20%  { color: #00a2ff; text-shadow: 0 0 10px #00a2ff, 0 0 20px #00a2ff; }
+            40%  { color: #00ffc8; text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8; }
+            60%  { color: #c8ff00; text-shadow: 0 0 10px #c8ff00, 0 0 20px #c8ff00; }
+            80%  { color: #ff8a00; text-shadow: 0 0 10px #ff8a00, 0 0 20px #ff8a00; }
+            100% { color: #ff00de; text-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de; }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1rem; }
+            p { font-size: 0.7rem; }
+            .loading-container { width: 90%; }
+        }
