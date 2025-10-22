@@ -3,7 +3,7 @@
             let counter = 0;
             const interval = setInterval(() => {
                 counter++;
-                if (counter <= 35) {
+                if (counter <= 50) {
                     percentageEl.textContent = counter + '%';
                 } else {
                     clearInterval(interval);
